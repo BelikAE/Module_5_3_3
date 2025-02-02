@@ -30,8 +30,8 @@ namespace Module_5_3_3
                 {
                     Element element = doc.GetElement(selectedElem);
 
-                    double Length = UnitUtils.ConvertFromInternalUnits(element.get_Parameter(BuiltInParameter.CURVE_ELEM_LENGTH).AsDouble(), UnitTypeId.Meters)*1.1;
-                    element.LookupParameter("Длина с запасом").Set(UnitUtils.ConvertToInternalUnits(Length, UnitTypeId.Millimeters));
+                    double length = UnitUtils.ConvertFromInternalUnits(element.get_Parameter(BuiltInParameter.CURVE_ELEM_LENGTH).AsDouble(), UnitTypeId.Meters)*1.1;
+                    element.LookupParameter("Длина с запасом").Set(UnitUtils.ConvertToInternalUnits(length, UnitTypeId.Millimeters));
                 }
                 ts.Commit();
             }
